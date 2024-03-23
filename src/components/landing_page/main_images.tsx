@@ -24,7 +24,7 @@ const MainImagesComponent: React.FC<MainImagesComponentProps> = ({
                 {text}
             </p>
             <div className="image-container gap-5 mt-6">
-                <div className="rounded-tl-[25px] rounded-br-[25px] h-[auto] overflow-hidden">
+                <div className="rounded-tl-[25px] rounded-br-[25px] max-h[30vh] overflow-hidden">
                     <Image src={secondImage} alt="Second Image" width={200} height={200} layout="responsive" className="mt-2 rounded-tl-[25px] rounded-br-[25px]" />
                 </div>
 
