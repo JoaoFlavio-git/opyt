@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 246, 246, 246;
+  --background-end-rgb: 246, 200, 200;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 246, 246, 246;
+    --background-start-rgb: 246, 246, 246; 
+    --background-end-rgb: 246, 246, 246; 
+  }
+}
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.mobile-image-container {
+  width: 100%; 
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.message-box-container {
+  position: absolute;
+  top: -50px;
+  left: -30%;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.0);
+}
+
+.banner-phone {
+  margin-top: 45px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .message-box-container {
+    display: none;
+  }
+
+  .banner-phone {
+    margin-top: 0px;
+  }
+
+  .mobile-image-container {
+      height: 100%; 
+  }
+
+  .mobile-image-container img {
+      object-fit: cover; 
+      width: 100%;
+      height: 100%;
+  }
+}
+
